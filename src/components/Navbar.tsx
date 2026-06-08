@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 const links = [
+  { href: "#specijalitet", label: "Specijalitet" },
   { href: "#o-nama", label: "O nama" },
   { href: "#meni", label: "Meni" },
   { href: "#galerija", label: "Galerija" },
