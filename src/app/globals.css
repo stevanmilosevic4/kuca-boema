@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Kuća Boema — bohemian kafana palette.
+  Warm cream paper, deep wine/burgundy, antique gold accents, charcoal ink.
+*/
+@theme {
+  --color-cream: #f6efe2;
+  --color-paper: #fbf7ee;
+  --color-wine: #5a1a22;
+  --color-wine-dark: #3d1016;
+  --color-gold: #c69749;
+  --color-gold-soft: #e0c486;
+  --color-ink: #211b17;
+  --color-ink-soft: #4a4038;
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* offset anchor jumps so the sticky navbar doesn't cover section headings */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Thin gold divider used between sections */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-gold) 80%,
+    transparent
+  );
+}
