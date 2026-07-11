@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
   - Prikazuje se prvih 6, ostali na dugme „Prikaži još" (radi brzine sajta).
 */
 const POSTS: string[] = [
-  "https://www.instagram.com/reel/DZxVf13M03S/",
   "https://www.instagram.com/reel/DMxLDOFs3Tf/",
   "https://www.instagram.com/reel/DL20N2_MVhr/",
   "https://www.instagram.com/reel/DaLSMPMswhO/",
@@ -98,7 +97,7 @@ export default function InstagramFeed() {
               onClick={() => setVisible((v) => v + BATCH)}
               className="rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
             >
-              Prikaži još ({POSTS.length - visible})
+              Prikaži još
             </button>
           )}
           <a
