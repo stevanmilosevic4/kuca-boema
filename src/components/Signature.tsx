@@ -20,7 +20,7 @@ export default function Signature() {
             Specijalitet kuće
           </p>
           <h2 className="mt-5 font-display text-4xl leading-tight text-cream sm:text-5xl">
-            Prasеće bajadere
+            Praseće bajadere
             <span className="block text-gold-soft">— pečenje bez kostiju</span>
           </h2>
           <div className="rule-gold my-6 max-w-sm" />
@@ -45,6 +45,11 @@ export default function Signature() {
             </li>
           </ul>
 
+          <p className="mt-6 inline-flex items-center gap-2 rounded-sm border border-gold/60 bg-gold/10 px-4 py-2 font-medium text-gold-soft">
+            <span aria-hidden="true">🔥</span> Vruće praseće bajadere — svakim
+            danom u 15h
+          </p>
+
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#kontakt"
@@ -56,7 +61,7 @@ export default function Signature() {
               href="#meni"
               className="rounded-full border border-gold-soft/60 px-7 py-3 font-medium text-cream transition-colors hover:bg-cream/10"
             >
-              Ceo meni
+              Ceo jelovnik
             </a>
           </div>
         </div>
@@ -78,7 +83,7 @@ export default function Signature() {
                 Vaša fotografija
               </span>
               <span className="mt-1 text-sm text-cream/60">
-                prasеће bajadere
+                praseće bajadere
               </span>
             </div>
           </div>

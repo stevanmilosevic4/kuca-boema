@@ -23,10 +23,10 @@ export default function Hero() {
 
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
         <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gold-soft">
-          Od 2024
+          Od 2024 · Hasanaginice 8a
         </p>
         <h1 className="font-display text-5xl leading-tight text-cream sm:text-7xl">
-          Kuća Boema
+          Kafana <span className="whitespace-nowrap">Kuća Boema</span>
         </h1>
         <div className="mx-auto my-6 h-px w-40 bg-gold/70" />
         <p className="mx-auto max-w-xl text-lg text-cream/85 sm:text-xl">

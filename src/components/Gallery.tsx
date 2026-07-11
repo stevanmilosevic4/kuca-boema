@@ -15,7 +15,7 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-  { label: "Prasеће bajadere", hue: "linear-gradient(160deg,#7a3b16,#3d1016)" },
+  { label: "Praseće bajadere", hue: "linear-gradient(160deg,#7a3b16,#3d1016)" },
   { label: "Pečenje bez kostiju", hue: "linear-gradient(160deg,#8a4a1a,#4a1410)" },
   { label: "Roštilj", hue: "linear-gradient(160deg,#6b2028,#2a0b0f)" },
   { label: "Karađorđeva", hue: "linear-gradient(160deg,#7a3b16,#3d1016)" },

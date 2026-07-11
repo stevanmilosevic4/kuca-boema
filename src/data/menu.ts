@@ -19,12 +19,12 @@ export const menu: MenuCategory[] = [
     title: "Specijaliteti kuće ★",
     items: [
       {
-        name: "Prasеће bajadere (pečenje bez kostiju)",
+        name: "Praseće bajadere (pečenje bez kostiju)",
         description: "Naš čuveni specijalitet — otkošteno mlado prase, porcija",
         price: "1.690",
       },
       {
-        name: "Prasеће pečenje — za društvo",
+        name: "Praseće pečenje — za društvo",
         description: "Cela porcija za 4–6 osoba, uz priloge (po dogovoru)",
         price: "po kg",
       },
