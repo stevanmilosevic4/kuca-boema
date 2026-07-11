@@ -12,8 +12,24 @@ type Photo = {
 
 const photos: Photo[] = [
   {
+    src: "pecenje-na-raznju-priprema.jpg",
+    alt: "Priprema prasećeg pečenja na ražnju u kafani Kuća Boema, Rakovica",
+  },
+  {
     src: "prasece-pecenje-razanj.jpg",
     alt: "Praseće pečenje na ražnju — specijalitet kafane Kuća Boema u Rakovici",
+  },
+  {
+    src: "konobar-cevapi-vesalica.jpg",
+    alt: "Ćevapi sa kajmakom i vešalica u sosu — jela sa roštilja",
+  },
+  {
+    src: "biftek-sa-povrcem.jpg",
+    alt: "Biftek sa grilovanim povrćem — restoran Kuća Boema Beograd",
+  },
+  {
+    src: "gulas-sa-pireom-odozgo.jpg",
+    alt: "Juneći gulaš sa pireom u zemljanoj činiji — gotova jela",
   },
   {
     src: "prasece-bajaderice-tanjir.jpg",
