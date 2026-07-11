@@ -16,6 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // Apsolutna osnova za OG slike i linkove pri deljenju.
+  metadataBase: new URL("https://kucaboema.rs"),
   // Title ≤60: primarna ključna reč "kafana Kuća Boema" na početku.
   title: {
     default: "Kafana Kuća Boema — boemska kafana u Rakovici, Beograd",
@@ -46,6 +48,7 @@ export const metadata: Metadata = {
       "Domaća kuhinja, vruće praseće bajadere svakim danom u 15h i živa muzika. Hasanaginice 8a, Rakovica.",
     locale: "sr_RS",
     type: "website",
+    images: ["/logo/og.jpg"],
   },
 };
 

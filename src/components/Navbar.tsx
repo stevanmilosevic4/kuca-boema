@@ -18,12 +18,21 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/30 bg-wine-dark/95 text-cream backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <Link href="/#vrh" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-wide text-gold-soft">
-            Kuća Boema
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-cream/70">
-            Rakovica · Beograd
+        <Link href="/#vrh" className="flex items-center gap-3 leading-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo/kucica.png"
+            alt=""
+            aria-hidden="true"
+            className="h-9 w-9 rounded-sm"
+          />
+          <span className="flex flex-col">
+            <span className="font-display text-xl tracking-wide text-gold-soft">
+              Kuća Boema
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-cream/70">
+              Rakovica · Beograd
+            </span>
           </span>
         </Link>
 

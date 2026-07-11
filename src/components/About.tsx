@@ -28,21 +28,25 @@ export default function About() {
           </p>
         </div>
 
-        {/* Decorative panel — swap for a photo of the interior. */}
-        <div className="relative">
-          <div
-            className="aspect-[4/5] w-full rounded-sm shadow-xl"
-            style={{
-              background:
-                "linear-gradient(160deg, #5a1a22 0%, #3d1016 60%, #2a0b0f 100%)",
-            }}
-          />
-          <div className="absolute inset-4 rounded-sm border border-gold/40" />
-          <div className="absolute bottom-8 left-8 right-8 text-cream">
-            <p className="font-display text-2xl text-gold-soft">„Pij, pevaj,
-              i ostani malo duže.”</p>
-            <p className="mt-2 text-sm text-cream/70">— natpis iznad šanka</p>
+        {/* Logo tabla kafane u zlatnom ramu, citat kao potpis ispod */}
+        <div>
+          <div className="relative">
+            <div className="absolute inset-0 rotate-2 rounded-sm border border-gold/40" />
+            <div className="relative -rotate-1 overflow-hidden rounded-sm shadow-xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo/kuca-boema-logo.jpg"
+                alt="Logo kafane Kuća Boema — drvena kućica, est. 2024, restoran"
+                className="w-full"
+              />
+            </div>
           </div>
+          <p className="mt-8 text-center font-display text-2xl text-wine">
+            „Pij, pevaj, i ostani malo duže.”
+          </p>
+          <p className="mt-2 text-center text-sm text-ink-soft">
+            — natpis iznad šanka
+          </p>
         </div>
       </div>
     </section>
