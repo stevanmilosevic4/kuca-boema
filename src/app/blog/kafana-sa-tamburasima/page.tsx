@@ -27,8 +27,8 @@ export default function Post() {
         izbliza, uz dobru kapljicu i pun sto.
       </p>
       <p className="mb-4 text-ink-soft leading-relaxed">
-        Najlepše je doći uveče, kada uz vruće pečenje i domaću rakiju tamburaši
-        obiđu svaki sto. Vikendom preporučujemo rezervaciju.
+        Živa muzika svira petkom od 20h — uz vruće pečenje i domaću rakiju,
+        tamburaši obiđu svaki sto. Za petak uveče preporučujemo rezervaciju.
       </p>
 
       <p className="mt-8 text-ink-soft">

@@ -24,7 +24,7 @@ export default function Post() {
         Kad neko pita gde je najbolja boemska kafana u Beogradu, odgovor se ne
         meri zvezdicama, već osećajem: da li vas dočekaju kao svog, da li miriše
         pečenje, i da li se pesma zapeva sama od sebe. Upravo takvu kafanu
-        gradimo u Rakovici.
+        smo izgradili u Rakovici.
       </p>
       <p className="mb-4 text-ink-soft leading-relaxed">
         U Kući Boema sto se ne žuri, rakija je domaća, a naše praseće bajadere
