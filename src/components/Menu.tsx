@@ -1,5 +1,8 @@
-import { menu } from "@/data/menu";
+import Link from "next/link";
+import { menuHighlights } from "@/data/menu";
 
+// Sekcija na početnoj prikazuje izbor iz ponude;
+// kompletan jelovnik (sva jela i pića) je na /jelovnik.
 export default function Menu() {
   return (
     <section id="meni" className="bg-wine-dark py-24 text-cream">
@@ -9,17 +12,17 @@ export default function Menu() {
             Ponuda kuće
           </p>
           <h2 className="font-display text-4xl text-cream sm:text-5xl">
-            Jelovnik
+            Iz jelovnika
           </h2>
           <div className="mx-auto my-6 h-px w-40 bg-gold/60" />
           <p className="mx-auto max-w-xl text-cream/70">
-            Sve cene su izražene u dinarima (RSD). Jelovnik se menja prema
-            sezoni i ponudi pijace.
+            Sve cene su izražene u dinarima (RSD), sa PDV-om. Ovo je samo izbor
+            — kompletnu ponudu jela i pića pogledajte u jelovniku.
           </p>
         </div>
 
         <div className="mt-14 grid gap-x-14 gap-y-12 md:grid-cols-2">
-          {menu.map((category) => (
+          {menuHighlights.map((category) => (
             <div key={category.id}>
               <h3 className="font-display text-2xl text-gold-soft">
                 {category.title}
@@ -45,6 +48,15 @@ export default function Menu() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 text-center">
+          <Link
+            href="/jelovnik/"
+            className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
+          >
+            Kompletan jelovnik
+          </Link>
         </div>
       </div>
     </section>

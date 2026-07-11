@@ -6,7 +6,7 @@ import Link from "next/link";
 const links = [
   { href: "/#specijalitet", label: "Specijalitet" },
   { href: "/#o-nama", label: "O nama" },
-  { href: "/#meni", label: "Jelovnik" },
+  { href: "/jelovnik/", label: "Jelovnik" },
   { href: "/#galerija", label: "Galerija" },
   { href: "/#poseta", label: "Posetite nas" },
   { href: "/#kontakt", label: "Kontakt" },

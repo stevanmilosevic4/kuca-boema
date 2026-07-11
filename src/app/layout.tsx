@@ -43,7 +43,6 @@ export const metadata: Metadata = {
 };
 
 // JSON-LD za Google (Restaurant/LocalBusiness rich results).
-// TODO: popuniti {POSTANSKI_BROJ}, {CENOVNI_RANG} (npr. "$$"), i geo koordinate.
 const restaurantSchema = {
   "@context": "https://schema.org",
   "@type": ["Restaurant", "LocalBusiness"],
@@ -58,12 +57,19 @@ const restaurantSchema = {
     streetAddress: "Hasanaginice 8a",
     addressLocality: "Beograd",
     addressRegion: "Rakovica",
-    postalCode: "{POSTANSKI_BROJ}",
+    postalCode: "11090",
     addressCountry: "RS",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 44.7569016,
+    longitude: 20.4564398,
+  },
+  hasMap: "https://maps.app.goo.gl/LbJMdimcwjd8ATsN8",
   openingHours: ["Tu-Sa 09:00-23:00", "Su 10:00-20:00"],
-  priceRange: "{CENOVNI_RANG}",
+  priceRange: "$$",
   url: "https://stevanmilosevic4.github.io/kuca-boema/",
+  hasMenu: "https://stevanmilosevic4.github.io/kuca-boema/jelovnik/",
   sameAs: ["https://www.instagram.com/kucaboema/"],
 };
 

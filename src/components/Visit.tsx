@@ -41,7 +41,7 @@ export default function Visit() {
               Rakovica, Beograd
             </address>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Hasanaginice+8a+Rakovica+Beograd"
+              href="https://maps.app.goo.gl/LbJMdimcwjd8ATsN8"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-block text-wine underline decoration-gold underline-offset-4 hover:text-gold"
@@ -54,7 +54,7 @@ export default function Visit() {
           <div className="overflow-hidden rounded-sm border border-gold/30 shadow-md">
             <iframe
               title="Lokacija — Hasanaginice 8a, Rakovica, Beograd"
-              src="https://maps.google.com/maps?q=Hasanaginice%208a%2C%20Rakovica%2C%20Beograd&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=44.7569016,20.4564398&z=17&ie=UTF8&iwloc=&output=embed"
               className="h-full min-h-[340px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

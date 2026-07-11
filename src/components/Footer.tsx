@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const footerLinks = [
+  { href: "/jelovnik/", label: "Jelovnik" },
   { href: "/rezervacije/", label: "Rezervacije" },
   { href: "/proslave/", label: "Proslave" },
   { href: "/blog/", label: "Boemske priče" },

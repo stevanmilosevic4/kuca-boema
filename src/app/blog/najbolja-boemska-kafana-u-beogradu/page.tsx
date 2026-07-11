@@ -42,7 +42,7 @@ export default function Post() {
         </Link>{" "}
         ili pogledajte{" "}
         <Link
-          href="/#meni"
+          href="/jelovnik/"
           className="text-wine underline decoration-gold underline-offset-4 hover:text-gold"
         >
           jelovnik

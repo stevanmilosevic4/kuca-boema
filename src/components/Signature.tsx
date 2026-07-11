@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Signature() {
   return (
     <section
@@ -57,12 +59,12 @@ export default function Signature() {
             >
               Rezervišite Vaš Sto
             </a>
-            <a
-              href="#meni"
+            <Link
+              href="/jelovnik/"
               className="rounded-full border border-gold-soft/60 px-7 py-3 font-medium text-cream transition-colors hover:bg-cream/10"
             >
               Ceo jelovnik
-            </a>
+            </Link>
           </div>
         </div>
 
