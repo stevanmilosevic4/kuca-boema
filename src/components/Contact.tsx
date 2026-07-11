@@ -1,30 +1,11 @@
 /*
   Reservations / contact.
 
-  This is a static site (GitHub Pages), so there is no server to receive a form
-  submission. Two options:
-
-  1) Direct contact (used below) — `tel:` and `mailto:` links open the guest's
-     phone / email app pre-filled. No backend required.
-
-  2) A real form — sign up at https://formspree.io (free tier), then replace the
-     block below with:
-
-       <form action="https://formspree.io/f/XXXXXXX" method="POST" ...>
-         <input name="ime" ... /> <input name="datum" ... /> ...
-       </form>
-
-     Formspree emails you each submission and works on static hosting.
+  Static site — no server. Guests reserve by phone (the `tel:` links open the
+  dialer pre-filled) or via Instagram. If you ever want an on-site reservation
+  form, sign up at https://formspree.io (free) and drop in a <form> that posts
+  to your Formspree endpoint — it works on static hosting.
 */
-
-const reservationMail =
-  "mailto:rezervacije@kucaboema.rs" +
-  "?subject=" +
-  encodeURIComponent("Rezervacija stola — Kuća Boema") +
-  "&body=" +
-  encodeURIComponent(
-    "Poštovani,\n\nŽeleo/la bih da rezervišem sto.\n\nDatum:\nVreme:\nBroj osoba:\nIme i prezime:\nKontakt telefon:\n\nHvala!"
-  );
 
 export default function Contact() {
   return (
@@ -38,31 +19,31 @@ export default function Contact() {
         </h2>
         <div className="mx-auto my-6 h-px w-40 bg-gold/60" />
         <p className="mx-auto max-w-xl text-cream/75">
-          Za rezervacije i veće proslave pozovite nas ili pišite — odgovaramo u
-          najkraćem roku. Preporučujemo rezervaciju vikendom.
+          Za rezervacije i veće proslave pozovite nas — odgovaramo u najkraćem
+          roku. Preporučujemo rezervaciju vikendom.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           <a
-            href="tel:+381111234567"
+            href="tel:+381605009551"
             className="rounded-sm border border-gold/30 bg-cream/5 p-6 transition-colors hover:bg-cream/10"
           >
             <p className="text-sm uppercase tracking-widest text-gold-soft">
-              Telefon
+              Rezervacije
             </p>
-            <p className="mt-2 text-cream">+381 11 123 4567</p>
+            <p className="mt-2 text-cream">060 500 9551</p>
           </a>
           <a
-            href={reservationMail}
+            href="tel:+381113592765"
             className="rounded-sm border border-gold/30 bg-cream/5 p-6 transition-colors hover:bg-cream/10"
           >
             <p className="text-sm uppercase tracking-widest text-gold-soft">
-              Email
+              Fiksni
             </p>
-            <p className="mt-2 break-all text-cream">rezervacije@kucaboema.rs</p>
+            <p className="mt-2 text-cream">011 / 359 2765</p>
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/kucaboema/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-sm border border-gold/30 bg-cream/5 p-6 transition-colors hover:bg-cream/10"
@@ -75,10 +56,10 @@ export default function Contact() {
         </div>
 
         <a
-          href={reservationMail}
+          href="tel:+381605009551"
           className="mt-10 inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Pošaljite zahtev za rezervaciju
+          Pozovite za rezervaciju
         </a>
       </div>
     </section>

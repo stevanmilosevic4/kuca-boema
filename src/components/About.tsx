@@ -7,21 +7,21 @@ export default function About() {
             O nama
           </p>
           <h2 className="font-display text-4xl text-wine sm:text-5xl">
-            Duh stare Skadarlije
+            Boemski duh u srcu Rakovice
           </h2>
           <div className="rule-gold my-6 max-w-xs" />
           <p className="mb-4 text-ink-soft leading-relaxed">
-            Već gotovo jedan vek, Kuća Boema okuplja goste oko dugih stolova
-            zastrtih belim stolnjacima. Kroz našu baštu prošli su pesnici,
-            glumci i putnici namernici — svako je poneo priču, a ostavio pesmu.
+            Kuća Boema je tradicionalna kafana u Rakovici, otvorena 2024. godine
+            sa jednom idejom — da vrati toplinu prave beogradske kafane, daleko
+            od gradske gužve, tamo gde se gost oseća kao kod svoje kuće.
           </p>
           <p className="mb-4 text-ink-soft leading-relaxed">
-            Kuvamo onako kako se kuvalo nekada: sporo, sa pažnjom i od
-            najboljih domaćih namirnica. Roštilj na žaru, sarma koja krčka
-            satima i rakija iz naše kace — to je naša svakodnevica.
+            Kuvamo onako kako se kuvalo nekada: sporo, sa pažnjom i od najboljih
+            domaćih namirnica. Naše čuveno pečenje, roštilj na žaru i domaća
+            rakija razlog su zbog kojeg nam se gosti stalno vraćaju.
           </p>
           <p className="text-ink-soft leading-relaxed">
-            Uveče, kada zasviraju tamburaši, kafana oživi onako kako samo
+            Uveče, kada zasviraju tamburaši, kafana oživi onako kako samo prava
             beogradska boemija ume.
           </p>
         </div>

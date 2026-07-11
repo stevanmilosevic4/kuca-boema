@@ -23,15 +23,15 @@ export default function Hero() {
 
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
         <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gold-soft">
-          Od 1932 · Skadarlija
+          Od 2024
         </p>
         <h1 className="font-display text-5xl leading-tight text-cream sm:text-7xl">
           Kuća Boema
         </h1>
         <div className="mx-auto my-6 h-px w-40 bg-gold/70" />
         <p className="mx-auto max-w-xl text-lg text-cream/85 sm:text-xl">
-          Tradicionalna beogradska kafana — domaća kuhinja, vrhunska vina i živa
-          muzika u srcu boemske četvrti.
+          Tradicionalna beogradska kafana u Rakovici — domaća kuhinja, čuveno
+          pečenje i živa muzika uz pravi boemski duh.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -39,7 +39,7 @@ export default function Hero() {
             href="#meni"
             className="rounded-full bg-gold px-7 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
           >
-            Pogledajte meni
+            Pogledajte jelovnik
           </a>
           <a
             href="#kontakt"

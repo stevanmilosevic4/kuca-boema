@@ -5,9 +5,9 @@ import { useState } from "react";
 const links = [
   { href: "#specijalitet", label: "Specijalitet" },
   { href: "#o-nama", label: "O nama" },
-  { href: "#meni", label: "Meni" },
+  { href: "#meni", label: "Jelovnik" },
   { href: "#galerija", label: "Galerija" },
-  { href: "#poseta", label: "Poseta" },
+  { href: "#poseta", label: "Posetite nas" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
@@ -22,7 +22,7 @@ export default function Navbar() {
             Kuća Boema
           </span>
           <span className="text-[10px] uppercase tracking-[0.3em] text-cream/70">
-            Skadarlija · Beograd
+            Rakovica · Beograd
           </span>
         </a>
 
@@ -40,7 +40,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="tel:+381111234567"
+              href="tel:+381605009551"
               className="rounded-full border border-gold px-4 py-1.5 text-sm font-medium text-gold-soft transition-colors hover:bg-gold hover:text-wine-dark"
             >
               Rezervacije
@@ -80,11 +80,11 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="tel:+381111234567"
+              href="tel:+381605009551"
               onClick={() => setOpen(false)}
               className="mt-2 inline-block rounded-full border border-gold px-4 py-2 text-sm font-medium text-gold-soft"
             >
-              Rezervacije · +381 11 123 4567
+Rezervacije · 060 500 9551
             </a>
           </li>
         </ul>

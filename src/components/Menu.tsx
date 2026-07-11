@@ -6,10 +6,10 @@ export default function Menu() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-gold-soft">
-            Jelovnik
+            Ponuda kuće
           </p>
           <h2 className="font-display text-4xl text-cream sm:text-5xl">
-            Naš meni
+            Jelovnik
           </h2>
           <div className="mx-auto my-6 h-px w-40 bg-gold/60" />
           <p className="mx-auto max-w-xl text-cream/70">

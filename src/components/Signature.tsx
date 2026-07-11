@@ -25,10 +25,10 @@ export default function Signature() {
           </h2>
           <div className="rule-gold my-6 max-w-sm" />
           <p className="max-w-md text-cream/80 leading-relaxed">
-            Naš ponos i ono po čemu nas pamte. Mlado prase, polako pečeno do
-            zlatne kore, pa pažljivo otkošteno i složeno u sočne „bajadere“ —
-            meso koje se topi, hrskava korica i miris koji vraća u stara
-            vremena. Bez kostiju, bez žurbe, samo savršen zalogaj.
+            Naš ponos i ono po čemu nas pamte. Mlado prase najpre pažljivo
+            otkoštimo, pa ga polako pečemo do zlatne, hrskave kore i složimo u
+            sočne „bajadere“ — meso koje se topi, korica koja hrska i miris koji
+            vraća u stara vremena. Bez kostiju, bez žurbe, samo savršen zalogaj.
           </p>
 
           <ul className="mt-6 space-y-2 text-cream/75">
@@ -40,7 +40,8 @@ export default function Signature() {
               jelo
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-gold">✦</span> Idealno za društvo i proslave
+              <span className="text-gold">✦</span> Sočno meso i hrskava korica u
+              svakom zalogaju
             </li>
           </ul>
 
@@ -49,7 +50,7 @@ export default function Signature() {
               href="#kontakt"
               className="rounded-full bg-gold px-7 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
             >
-              Naručite za vaš sto
+              Rezervišite Vaš Sto
             </a>
             <a
               href="#meni"
