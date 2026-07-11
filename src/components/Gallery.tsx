@@ -65,8 +65,8 @@ const photos: Photo[] = [
   },
 ];
 
-// basePath prefiks za slike u produkciji (GitHub Pages služi sajt pod /kuca-boema)
-const base = process.env.NODE_ENV === "production" ? "/kuca-boema" : "";
+// Sajt se služi sa korena domena (kucaboema.rs) — bez prefiksa.
+const base = "";
 
 function Tile({ photo }: { photo: Photo }) {
   return (

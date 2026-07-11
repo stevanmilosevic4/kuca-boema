@@ -1,25 +1,16 @@
 import type { NextConfig } from "next";
 
 /**
- * Static-export config for GitHub Pages.
+ * Static-export config — custom domain kucaboema.rs.
  *
- * GitHub Pages serves a project site from a sub-path
- * (https://<user>.github.io/<repo>), so in production we prefix every route and
- * asset with `/<repo>`. Locally (`npm run dev`) the prefix is empty so the site
- * works at http://localhost:3000.
- *
- * If you later switch to a custom domain or a `<user>.github.io` repo, set
- * `basePath`/`assetPrefix` back to "".
+ * The site is served from the domain root (public/CNAME + GitHub Pages custom
+ * domain), so no basePath/assetPrefix is needed. If the site ever moves back
+ * to https://<user>.github.io/<repo>, reintroduce basePath/assetPrefix "/<repo>".
  */
-const repo = "kuca-boema";
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig: NextConfig = {
   output: "export", // emit a fully static site into ./out
   images: { unoptimized: true }, // no image-optimization server on GH Pages
-  basePath: isProd ? `/${repo}` : "",
-  assetPrefix: isProd ? `/${repo}/` : "",
-  trailingSlash: true, // GH Pages serves /meni/ -> /meni/index.html
+  trailingSlash: true, // GH Pages serves /jelovnik/ -> /jelovnik/index.html
 };
 
 export default nextConfig;

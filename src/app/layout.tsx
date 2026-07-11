@@ -93,8 +93,8 @@ const restaurantSchema = {
     },
   ],
   priceRange: "$$",
-  url: "https://stevanmilosevic4.github.io/kuca-boema/",
-  hasMenu: "https://stevanmilosevic4.github.io/kuca-boema/jelovnik/",
+  url: "https://kucaboema.rs/",
+  hasMenu: "https://kucaboema.rs/jelovnik/",
   sameAs: ["https://www.instagram.com/kucaboema/"],
 };
 
