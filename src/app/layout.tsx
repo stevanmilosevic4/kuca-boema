@@ -42,6 +42,31 @@ export const metadata: Metadata = {
   },
 };
 
+// JSON-LD za Google (Restaurant/LocalBusiness rich results).
+// TODO: popuniti {POSTANSKI_BROJ}, {CENOVNI_RANG} (npr. "$$"), i geo koordinate.
+const restaurantSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Restaurant", "LocalBusiness"],
+  name: "Kuća Boema",
+  alternateName: "Kafana Kuća Boema",
+  description:
+    "Boemska kafana u Rakovici — domaća kuhinja, praseće bajadere (pečenje bez kostiju) i živa muzika.",
+  servesCuisine: "Serbian",
+  telephone: "+381605009551",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Hasanaginice 8a",
+    addressLocality: "Beograd",
+    addressRegion: "Rakovica",
+    postalCode: "{POSTANSKI_BROJ}",
+    addressCountry: "RS",
+  },
+  openingHours: ["Tu-Sa 09:00-23:00", "Su 10:00-20:00"],
+  priceRange: "{CENOVNI_RANG}",
+  url: "https://stevanmilosevic4.github.io/kuca-boema/",
+  sameAs: ["https://www.instagram.com/kucaboema/"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,6 +78,10 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
+        />
         {children}
       </body>
     </html>

@@ -38,7 +38,7 @@ function Tile({ photo }: { photo: Photo }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={`${base}/galerija/${photo.src}`}
-          alt={photo.label}
+          alt={`${photo.label} — boemska kafana Kuća Boema, Rakovica`}
           className="h-full w-full object-cover"
           loading="lazy"
         />

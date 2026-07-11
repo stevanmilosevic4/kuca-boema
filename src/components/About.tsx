@@ -7,7 +7,7 @@ export default function About() {
             O nama
           </p>
           <h2 className="font-display text-4xl text-wine sm:text-5xl">
-            Boemski duh u srcu Rakovice
+            Boemska kafana u srcu Rakovice
           </h2>
           <div className="rule-gold my-6 max-w-xs" />
           <p className="mb-4 text-ink-soft leading-relaxed">
