@@ -52,6 +52,21 @@ export default function Visit() {
             >
               Otvori u Google Mapama →
             </a>
+
+            <ul className="mt-8 space-y-2 text-ink-soft">
+              <li className="flex items-center gap-3">
+                <span aria-hidden="true">🌿</span> Bašta — uživajte napolju kad
+                je lepo vreme
+              </li>
+              <li className="flex items-center gap-3">
+                <span aria-hidden="true">🅿️</span> Javnog parkinga oko kafane
+                ima sasvim dovoljno
+              </li>
+              <li className="flex items-center gap-3">
+                <span aria-hidden="true">📦</span> Sva jela možete naručiti i
+                za poneti — pozovite unapred
+              </li>
+            </ul>
           </div>
 
           {/* Map */}

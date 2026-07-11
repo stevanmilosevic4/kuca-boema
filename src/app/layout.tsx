@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     "porodični restoran Beograd",
     "restoran roštilj i pečenje",
     "restoran za slavu Beograd",
+    "restoran sa baštom Beograd",
+    "pečenje za poneti Beograd",
     "kafana sa živom muzikom Beograd",
     "praseće pečenje bez kostiju",
   ],
@@ -73,6 +75,23 @@ const restaurantSchema = {
   hasMap: "https://maps.app.goo.gl/LbJMdimcwjd8ATsN8",
   openingHours: ["Tu-Sa 09:00-23:00", "Su 10:00-20:00"],
   acceptsReservations: true,
+  amenityFeature: [
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Bašta (sedenje napolju)",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Javni parking u okolini",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Naručivanje za poneti",
+      value: true,
+    },
+  ],
   priceRange: "$$",
   url: "https://stevanmilosevic4.github.io/kuca-boema/",
   hasMenu: "https://stevanmilosevic4.github.io/kuca-boema/jelovnik/",

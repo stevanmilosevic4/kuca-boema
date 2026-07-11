@@ -54,6 +54,14 @@ export default function RezervacijePage() {
         Hasanaginice 8a, Rakovica, Beograd.
       </p>
 
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        Naručivanje za poneti
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        Dostavu nemamo, ali sva jela — uključujući pečenje na kilo — možete
+        naručiti telefonom i pokupiti spremno u dogovoreno vreme.
+      </p>
+
       <p className="mt-8 text-ink-soft">
         Planirate veće društvo?{" "}
         <Link

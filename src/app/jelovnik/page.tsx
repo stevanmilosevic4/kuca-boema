@@ -29,6 +29,7 @@ export default function JelovnikPage() {
               Srpska kuhinja kakva se pamti — specijaliteti kuće, roštilj i
               pečenje, domaća rakija i vinska karta. Sve cene su u dinarima
               (RSD), sa PDV-om. Vruće praseće bajadere — svakim danom u 15h.
+              Sva jela možete naručiti i za poneti: 060 500 9551.
             </p>
           </div>
 
