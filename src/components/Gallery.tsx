@@ -1,58 +1,90 @@
-// Moving photo carousel (auto-scrolling marquee).
+// Pokretna galerija (auto-scroll marquee) sa pravim fotografijama.
 //
-// HOW TO ADD REAL PHOTOS:
-// 1. Put your food photos in `public/galerija/` (e.g. prasece.jpg, cevapi.jpg…).
-// 2. In `photos` below, set `src` to the file name and keep a short `label`.
-// 3. The tile will render the photo automatically (the gradient is just a
-//    fallback for tiles that don't have a `src` yet).
-//
-// The strip scrolls on its own and pauses when a visitor hovers over it.
+// KAKO DODATI NOVU SLIKU:
+// 1. Ubacite optimizovan JPG u public/galerija/ (SEO ime, malim slovima, bez č/ć/š).
+// 2. Dodajte { src, alt } u listu ispod — alt je nevidljiv posetiocima,
+//    ali ga Google čita (opis jela + ključne reči, prirodno sročeno).
 
 type Photo = {
-  label: string;
-  src?: string; // file in /public/galerija/ — e.g. "prasece-bajadere.jpg"
-  hue: string; // fallback color while there is no photo
+  src: string; // fajl u /public/galerija/
+  alt: string; // SEO opis — ne prikazuje se na stranici
 };
 
 const photos: Photo[] = [
-  { label: "Praseće bajadere", hue: "linear-gradient(160deg,#7a3b16,#3d1016)" },
-  { label: "Pečenje bez kostiju", hue: "linear-gradient(160deg,#8a4a1a,#4a1410)" },
-  { label: "Roštilj", hue: "linear-gradient(160deg,#6b2028,#2a0b0f)" },
-  { label: "Karađorđeva", hue: "linear-gradient(160deg,#7a3b16,#3d1016)" },
-  { label: "Sarma", hue: "linear-gradient(160deg,#5a1a22,#2a0b0f)" },
-  { label: "Kajmak i pogača", hue: "linear-gradient(160deg,#8a6a2a,#4a3420)" },
-  { label: "Domaća rakija", hue: "linear-gradient(160deg,#4a3420,#2a0b0f)" },
-  { label: "Bašta uveče", hue: "linear-gradient(160deg,#3d1016,#1c0608)" },
+  {
+    src: "prasece-pecenje-razanj.jpg",
+    alt: "Praseće pečenje na ražnju — specijalitet kafane Kuća Boema u Rakovici",
+  },
+  {
+    src: "prasece-bajaderice-tanjir.jpg",
+    alt: "Praseće bajaderice, pečenje bez kostiju — Kuća Boema Beograd",
+  },
+  {
+    src: "gurmanska-pljeskavica-pomfrit.jpg",
+    alt: "Gurmanska pljeskavica sa pomfritom i lukom — roštilj u kafani",
+  },
+  {
+    src: "muckalica-zemljana-cinija.jpg",
+    alt: "Mućkalica sa pireom u zemljanoj činiji — domaća kuhinja",
+  },
+  {
+    src: "boemska-trpeza-vece.jpg",
+    alt: "Boemska trpeza uveče uz rakiju — atmosfera kafane u Beogradu",
+  },
+  {
+    src: "prasece-bajaderice-izbliza.jpg",
+    alt: "Hrskava korica praseće bajaderice izbliza",
+  },
+  {
+    src: "postavljen-sto-rostilj.jpg",
+    alt: "Postavljen sto sa jelima sa roštilja — kafana za proslave",
+  },
+  {
+    src: "paradajz-salata-pecena-paprika.jpg",
+    alt: "Paradajz salata sa pečenom paprikom — sveže salate",
+  },
+  {
+    src: "domaca-trpeza-odozgo.jpg",
+    alt: "Domaća trpeza — pita, pečenje i predjela, restoran domaće kuhinje Beograd",
+  },
+  {
+    src: "prasece-bajaderice-porcija.jpg",
+    alt: "Porcija prasećih bajaderica — vruće svakim danom u 15h",
+  },
+  {
+    src: "gulas-rakija-salata.jpg",
+    alt: "Gulaš uz domaću rakiju i šopsku salatu",
+  },
+  {
+    src: "hladna-predjela-plata.jpg",
+    alt: "Plata hladnih predjela — pršuta, kulen i sir",
+  },
+  {
+    src: "prasece-bajaderice-odozgo.jpg",
+    alt: "Praseće bajaderice odozgo — kafana Kuća Boema Rakovica",
+  },
 ];
 
-// basePath prefix for images in production (GitHub Pages serves under /kuca-boema)
+// basePath prefiks za slike u produkciji (GitHub Pages služi sajt pod /kuca-boema)
 const base = process.env.NODE_ENV === "production" ? "/kuca-boema" : "";
 
 function Tile({ photo }: { photo: Photo }) {
   return (
-    <div
-      className="relative h-56 w-72 shrink-0 overflow-hidden rounded-sm shadow-md sm:h-64 sm:w-80"
-      style={photo.src ? undefined : { background: photo.hue }}
-    >
-      {photo.src && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={`${base}/galerija/${photo.src}`}
-          alt={`${photo.label} — boemska kafana Kuća Boema, Rakovica`}
-          className="h-full w-full object-cover"
-          loading="lazy"
-        />
-      )}
-      <div className="absolute inset-2 rounded-sm border border-gold/30" />
-      <span className="absolute bottom-3 left-4 font-display text-lg text-gold-soft drop-shadow">
-        {photo.label}
-      </span>
+    <div className="relative h-56 w-72 shrink-0 overflow-hidden rounded-sm shadow-md sm:h-64 sm:w-80">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${base}/galerija/${photo.src}`}
+        alt={photo.alt}
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+      <div className="pointer-events-none absolute inset-2 rounded-sm border border-gold/30" />
     </div>
   );
 }
 
 export default function Gallery() {
-  // Duplicate the list so the marquee can loop seamlessly (-50% translate).
+  // Dupliramo listu da se marquee besprekorno vrti u krug (-50% translate).
   const loop = [...photos, ...photos];
 
   return (
@@ -73,14 +105,14 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* full-bleed marquee with fading edges */}
+      {/* full-bleed marquee sa izbleđenim ivicama */}
       <div className="marquee relative mt-12 overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-paper to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-paper to-transparent" />
 
         <div className="marquee-track gap-5 px-2">
           {loop.map((photo, i) => (
-            <Tile key={`${photo.label}-${i}`} photo={photo} />
+            <Tile key={`${photo.src}-${i}`} photo={photo} />
           ))}
         </div>
       </div>
