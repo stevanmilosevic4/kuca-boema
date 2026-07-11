@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const links = [
-  { href: "#specijalitet", label: "Specijalitet" },
-  { href: "#o-nama", label: "O nama" },
-  { href: "#meni", label: "Jelovnik" },
-  { href: "#galerija", label: "Galerija" },
-  { href: "#poseta", label: "Posetite nas" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#specijalitet", label: "Specijalitet" },
+  { href: "/#o-nama", label: "O nama" },
+  { href: "/#meni", label: "Jelovnik" },
+  { href: "/#galerija", label: "Galerija" },
+  { href: "/#poseta", label: "Posetite nas" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {
@@ -17,25 +18,25 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/30 bg-wine-dark/95 text-cream backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <a href="#vrh" className="flex flex-col leading-none">
+        <Link href="/#vrh" className="flex flex-col leading-none">
           <span className="font-display text-xl tracking-wide text-gold-soft">
             Kuća Boema
           </span>
           <span className="text-[10px] uppercase tracking-[0.3em] text-cream/70">
             Rakovica · Beograd
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
                 className="text-sm tracking-wide text-cream/90 transition-colors hover:text-gold-soft"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
@@ -69,13 +70,13 @@ export default function Navbar() {
         <ul className="space-y-1 border-t border-gold/20 px-5 pb-4 pt-2 md:hidden">
           {links.map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="block py-2 text-cream/90 transition-colors hover:text-gold-soft"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
