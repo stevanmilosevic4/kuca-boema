@@ -328,7 +328,17 @@ export const menuHighlights: MenuCategory[] = [
   {
     id: "rostilj-izbor",
     title: "Sa roštilja — izbor",
-    items: menu.find((c) => c.id === "rostilj")!.items.slice(0, 6),
+    // izbor jela po imenu, da ne zavisi od redosleda u punom jelovniku
+    items: [
+      "Ćevapi 300 g",
+      "Pljeskavica 300 g",
+      "Ćevapi na kajmaku 350 g",
+      "Gurmanska pljeskavica 300 g",
+      "Dimljene kobasice 300 g",
+      "Boemski ražnjić 300 g",
+    ].map(
+      (n) => menu.find((c) => c.id === "rostilj")!.items.find((i) => i.name === n)!
+    ),
   },
   {
     id: "gotova-izbor",
