@@ -1,20 +1,41 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /*
   Zvanični Instagram embed pojedinačnih postova.
 
-  KAKO DODATI POST:
-  1. Otvorite post na instagram.com/kucaboema
-  2. Kopirajte link posta (npr. https://www.instagram.com/p/ABC123xyz/)
-  3. Dodajte ga u listu POSTS ispod — i to je sve.
-
-  Sekcija se ne prikazuje dok je lista prazna.
+  KAKO DODATI/IZBACITI POST:
+  - Samo dodajte ili obrišite link u listi POSTS (redosled = redosled prikaza).
+  - Prikazuje se prvih 6, ostali na dugme „Prikaži još" (radi brzine sajta).
 */
 const POSTS: string[] = [
-  // "https://www.instagram.com/p/XXXXXXXXXXX/",
+  "https://www.instagram.com/reel/DZxVf13M03S/",
+  "https://www.instagram.com/reel/DMxLDOFs3Tf/",
+  "https://www.instagram.com/reel/DL20N2_MVhr/",
+  "https://www.instagram.com/reel/DaLSMPMswhO/",
+  "https://www.instagram.com/reel/DZ5kwuwsFt2/",
+  "https://www.instagram.com/p/DXPO2j5DJL7/",
+  "https://www.instagram.com/reel/DTAgxZIDJ7k/",
+  "https://www.instagram.com/p/DSNlQodjP6t/",
+  "https://www.instagram.com/p/DSDlbv_DB0Q/",
+  "https://www.instagram.com/p/DR4x3HvDCSb/",
+  "https://www.instagram.com/p/DR18C2oDHUp/",
+  "https://www.instagram.com/p/DRuSz4yjEFj/",
+  "https://www.instagram.com/p/DRpF9UpjPon/",
+  "https://www.instagram.com/p/DRmZuLDDL8O/",
+  "https://www.instagram.com/p/DRhRvhtjFZR/",
+  "https://www.instagram.com/p/DReiefTjCiW/",
+  "https://www.instagram.com/p/DQoL6-ZjOAn/",
+  "https://www.instagram.com/p/DQljp8mDHo9/",
+  "https://www.instagram.com/p/DMIW663oSkN/",
+  "https://www.instagram.com/p/DMnTSsDoSNK/",
+  "https://www.instagram.com/reel/DLu07OqoJ6I/",
+  "https://www.instagram.com/reel/DK1-JwGoM6C/",
+  "https://www.instagram.com/reel/DJ6vsGIsTak/",
 ];
+
+const BATCH = 6;
 
 declare global {
   interface Window {
@@ -23,9 +44,11 @@ declare global {
 }
 
 export default function InstagramFeed() {
+  const [visible, setVisible] = useState(BATCH);
+
   useEffect(() => {
-    if (POSTS.length === 0) return;
-    // Instagramova skripta pretvara blockquote u pravi embed
+    // Instagramova skripta pretvara blockquote u pravi embed;
+    // pozivamo je ponovo pri svakom proširenju liste.
     if (window.instgrm) {
       window.instgrm.Embeds.process();
     } else {
@@ -34,7 +57,7 @@ export default function InstagramFeed() {
       s.async = true;
       document.body.appendChild(s);
     }
-  }, []);
+  }, [visible]);
 
   if (POSTS.length === 0) return null;
 
@@ -55,7 +78,7 @@ export default function InstagramFeed() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-start justify-center gap-6">
-          {POSTS.map((url) => (
+          {POSTS.slice(0, visible).map((url) => (
             <blockquote
               key={url}
               className="instagram-media"
@@ -68,7 +91,16 @@ export default function InstagramFeed() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {visible < POSTS.length && (
+            <button
+              type="button"
+              onClick={() => setVisible((v) => v + BATCH)}
+              className="rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
+            >
+              Prikaži još ({POSTS.length - visible})
+            </button>
+          )}
           <a
             href="https://www.instagram.com/kucaboema/"
             target="_blank"
