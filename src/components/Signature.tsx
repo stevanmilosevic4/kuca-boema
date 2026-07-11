@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+// basePath prefiks za slike u produkciji (GitHub Pages služi sajt pod /kuca-boema)
+const base = process.env.NODE_ENV === "production" ? "/kuca-boema" : "";
+
 export default function Signature() {
   return (
     <section
@@ -68,26 +71,17 @@ export default function Signature() {
           </div>
         </div>
 
-        {/* Dish showcase — replace this block's background with a real photo:
-            put e.g. /public/specijaliteti/prasece-bajadere.jpg and set it as
-            backgroundImage on the inner div. */}
-        <div className="relative mx-auto aspect-square w-full max-w-md">
+        {/* Dish showcase — fotografija iz public/specijaliteti/ */}
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-md">
           <div className="absolute inset-0 rotate-3 rounded-sm border border-gold/30" />
-          <div
-            className="absolute inset-0 -rotate-2 rounded-sm shadow-2xl"
-            style={{
-              background:
-                "linear-gradient(150deg, #7a3b16 0%, #5a1a22 50%, #2a0b0f 100%)",
-            }}
-          >
-            <div className="flex h-full flex-col items-center justify-center text-center">
-              <span className="font-display text-2xl text-gold-soft">
-                Vaša fotografija
-              </span>
-              <span className="mt-1 text-sm text-cream/60">
-                praseće bajadere
-              </span>
-            </div>
+          <div className="absolute inset-0 -rotate-2 overflow-hidden rounded-sm shadow-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${base}/specijaliteti/prasece-bajaderice.jpg`}
+              alt="Praseće bajaderice — specijalitet kafane Kuća Boema, Rakovica"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
