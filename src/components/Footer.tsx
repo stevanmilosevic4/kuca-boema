@@ -4,6 +4,7 @@ const footerLinks = [
   { href: "/jelovnik/", label: "Jelovnik" },
   { href: "/rezervacije/", label: "Rezervacije" },
   { href: "/proslave/", label: "Proslave" },
+  { href: "/slave/", label: "Slave i krštenja" },
   { href: "/blog/", label: "Boemske priče" },
 ];
 

@@ -21,7 +21,7 @@ export default function RezervacijePage() {
       <div className="rule-gold my-6 max-w-xs" />
 
       <p className="mb-4 text-ink-soft leading-relaxed">
-        Rezervacija stola u kafani Kuća Boema traje minut — pozovite nas i
+        Rezervacija stola u restoranu Kuća Boema traje minut — pozovite nas i
         recite za koliko osoba i kada dolazite. Vikendom i za veče uz živu
         muziku preporučujemo rezervaciju bar dan ranije.
       </p>

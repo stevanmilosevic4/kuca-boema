@@ -16,9 +16,11 @@ export default function About() {
             od gradske gužve, tamo gde se gost oseća kao kod svoje kuće.
           </p>
           <p className="mb-4 text-ink-soft leading-relaxed">
-            Kuvamo onako kako se kuvalo nekada: sporo, sa pažnjom i od najboljih
-            domaćih namirnica. Naše čuveno pečenje, roštilj na žaru i domaća
-            rakija razlog su zbog kojeg nam se gosti stalno vraćaju.
+            Pre svega smo porodični restoran srpske kuhinje: kuvamo onako kako
+            se kuvalo nekada — sporo, sa pažnjom i od najboljih domaćih
+            namirnica. Naše čuveno pečenje, roštilj na žaru i domaća rakija
+            razlog su zbog kojeg nam se gosti vraćaju na ručak, slavu i svako
+            veće okupljanje.
           </p>
           <p className="text-ink-soft leading-relaxed">
             Uveče, kada zasviraju tamburaši, kafana oživi onako kako samo prava

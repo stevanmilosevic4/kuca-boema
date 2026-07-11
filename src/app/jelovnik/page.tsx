@@ -26,8 +26,9 @@ export default function JelovnikPage() {
             </h1>
             <div className="mx-auto my-6 h-px w-40 bg-gold/60" />
             <p className="mx-auto max-w-xl text-cream/70">
-              Sve cene su izražene u dinarima (RSD), sa uračunatim PDV-om.
-              Vruće praseće bajadere — svakim danom u 15h.
+              Srpska kuhinja kakva se pamti — specijaliteti kuće, roštilj i
+              pečenje, domaća rakija i vinska karta. Sve cene su u dinarima
+              (RSD), sa PDV-om. Vruće praseće bajadere — svakim danom u 15h.
             </p>
           </div>
 

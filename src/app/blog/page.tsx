@@ -10,6 +10,10 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "rostilj-i-pecenje-beograd",
+    title: "Restoran za roštilj i pečenje — gde meso ima ukus kao nekad",
+  },
+  {
     slug: "najbolja-boemska-kafana-u-beogradu",
     title: "Najbolja boemska kafana u Beogradu — šta je čini pravom?",
   },
