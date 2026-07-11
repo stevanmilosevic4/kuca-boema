@@ -26,8 +26,9 @@ export default function Post() {
         planira po satu: sedne se, naruči, zapeva i ostane „još malo“.
       </p>
       <p className="mb-4 text-ink-soft leading-relaxed">
-        Preporuka kuće za pravo boemsko veče: krenite od domaće rakije i
-        kajmaka, nastavite uz praseće bajadere, a kraj prepustite tamburašima.
+        Preporuka kuće za pravo boemsko veče: dođite petkom, kada od 20h svira
+        živa muzika — krenite od domaće rakije i kajmaka, nastavite uz praseće
+        bajadere, a kraj prepustite tamburašima.
       </p>
 
       <p className="mt-8 text-ink-soft">
