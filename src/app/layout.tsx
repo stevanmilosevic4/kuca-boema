@@ -61,6 +61,7 @@ const restaurantSchema = {
   description:
     "Boemska kafana u Rakovici — domaća kuhinja, praseće bajadere (pečenje bez kostiju) i živa muzika.",
   servesCuisine: "Serbian",
+  image: "https://kucaboema.rs/logo/og.jpg",
   telephone: "+381605009551",
   address: {
     "@type": "PostalAddress",
@@ -76,7 +77,21 @@ const restaurantSchema = {
     longitude: 20.4564398,
   },
   hasMap: "https://maps.app.goo.gl/LbJMdimcwjd8ATsN8",
-  openingHours: ["Tu-Sa 09:00-23:00", "Su 10:00-20:00"],
+  // Precizan format radnog vremena (ponedeljak izostavljen = zatvoreno)
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "23:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:00",
+      closes: "20:00",
+    },
+  ],
   acceptsReservations: true,
   amenityFeature: [
     {
