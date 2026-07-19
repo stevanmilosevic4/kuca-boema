@@ -89,7 +89,7 @@ function Tile({ photo }: { photo: Photo }) {
     <div className="relative h-56 w-72 shrink-0 overflow-hidden rounded-sm shadow-md sm:h-64 sm:w-80">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`${base}/galerija/${photo.src}`}
+        src={`${base}/galerija/sm/${photo.src}`}
         alt={photo.alt}
         className="h-full w-full object-cover"
         loading="lazy"
