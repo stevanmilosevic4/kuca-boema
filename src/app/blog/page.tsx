@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "prasece-bajaderice-beograd",
+    title: "Praseće bajaderice — pečenje bez kosti koje izlazi vruće u 15h",
+  },
+  {
+    slug: "gde-jesti-pecenje-u-beogradu",
+    title: "Gde jesti pečenje u Beogradu — iskren odgovor iz Rakovice",
+  },
+  {
+    slug: "kafana-za-slavu-rakovica",
+    title: "Kafana za slavu u Rakovici — slavite kao domaćin, ne kao kuvar",
+  },
+  {
     slug: "rostilj-i-pecenje-beograd",
     title: "Restoran za roštilj i pečenje — gde meso ima ukus kao nekad",
   },
