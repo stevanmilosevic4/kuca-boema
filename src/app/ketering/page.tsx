@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import LangSwitcher from "@/components/LangSwitcher";
 
-// Primarna ključna reč: "ketering Beograd" / "ketering za firme"
+/*
+  SKRIVENA B2B stranica — kancelarijski ketering.
+  Nije linkovana nigde na sajtu, nije u sitemap-u i nosi noindex:
+  do nje se dolazi samo direktnim linkom koji vlasnik šalje firmama.
+*/
 export const metadata: Metadata = {
-  title: "Ketering za firme i proslave — Beograd",
+  title: "Kancelarijski ketering — ponuda za firme",
   description:
-    "Ketering iz kafane Kuća Boema u Rakovici: praseće pečenje na kilo, roštilj, gotova jela i meze plate za firme, događaje i slavlja. 060 500 9551.",
+    "Doručak i ručak za vaš tim, svakog radnog dana. Ponuda kafane Kuća Boema za firme u Beogradu.",
+  robots: { index: false, follow: false },
   alternates: {
     canonical: "/ketering/",
     languages: {
@@ -18,79 +22,120 @@ export const metadata: Metadata = {
   },
 };
 
+const paketi = [
+  {
+    naziv: "Doručak + ručak",
+    cena: "2.000 RSD",
+    jedinica: "po osobi dnevno",
+    opis: "Kompletan dan: doručak po izboru iz nedeljnog menija + ručak (glavno jelo uz supu/čorbu ili salatu iz dnevne ponude).",
+  },
+  {
+    naziv: "Samo ručak",
+    cena: "1.200 RSD",
+    jedinica: "po osobi dnevno",
+    opis: "Glavno jelo po izboru iz nedeljnog menija, uz supu/čorbu ili salatu iz dnevne ponude.",
+  },
+];
+
 export default function KeteringPage() {
   return (
     <PageShell>
       <LangSwitcher current="sr" />
 
       <p className="mb-3 text-sm uppercase tracking-[0.3em] text-gold">
-        Kuća Boema · Rakovica
+        Kuća Boema · ponuda za firme
       </p>
       <h1 className="font-display text-4xl text-wine sm:text-5xl">
-        Ketering za firme i proslave u Beogradu
+        Kancelarijski ketering — doručak i ručak za vaš tim
       </h1>
       <div className="rule-gold my-6 max-w-xs" />
 
       <p className="mb-4 text-ink-soft leading-relaxed">
-        Kada firma slavi, kuhinja ne sme da bude briga. Kuća Boema sprema
-        ketering iz sopstvene kuhinje — istu hranu zbog koje nam gosti daju
-        ocenu 4,9 na Google-u: pečenje, roštilj, gotova jela i domaće meze
-        plate. Vi kažete broj ljudi i priliku, mi složimo ponudu.
+        Kuća Boema svakog radnog dana sprema i donosi obroke timovima u
+        Beogradu — sveže, iz sopstvene kuhinje koja istovremeno hrani punu
+        kafanu (ocena 4,9 od preko 300 gostiju na Google-u). Svaki zaposleni
+        bira svoje jelo iz nedeljnog menija, a vama stiže jedna uredna isporuka
+        u kancelariju.
       </p>
 
-      <h2 className="mt-10 font-display text-2xl text-wine">Šta nudimo</h2>
-      <ul className="mt-3 space-y-2 text-ink-soft leading-relaxed">
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Praseće bajaderice — pečenje bez
-          kosti, na kilo (4.400 din/kg); jagnjeće pečenje (3.800 din/kg)
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Roštilj plate: ćevapi,
-          pljeskavice, kobasice, ražnjići — za posluženje sa nogu
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Gotova jela u većim količinama:
-          gulaš, mućkalica, prebranac; zimi sarma i svadbarski kupus
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Meze i plate: kajmak, pršuta,
-          kulen, sirevi, čvarci — uz domaći hleb i pogače
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Salate i domaći dezerti
-          (oblande, bajadere, palačinke); posna ponuda po dogovoru
-        </li>
-      </ul>
-
-      <h2 className="mt-10 font-display text-2xl text-wine">
-        Za koga radimo ketering
-      </h2>
-      <p className="mt-3 text-ink-soft leading-relaxed">
-        Poslovni ručkovi i kancelarijska posluženja, otvaranja i godišnjice
-        firmi, novogodišnje i timske proslave, kao i privatna slavlja — slave,
-        krštenja, rođendani u vašem prostoru. Ako je događaj kod nas, tu su
-        sala i bašta; ako je kod vas, hrana putuje spakovana i topla.
+      <h2 className="mt-10 font-display text-2xl text-wine">Paketi i cene</h2>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {paketi.map((p) => (
+          <div
+            key={p.naziv}
+            className="rounded-sm border border-gold/40 bg-cream p-6"
+          >
+            <p className="font-display text-xl text-wine">{p.naziv}</p>
+            <p className="mt-2 text-3xl font-medium text-gold">
+              {p.cena}
+              <span className="ml-2 text-sm font-normal text-ink-soft">
+                {p.jedinica}
+              </span>
+            </p>
+            <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+              {p.opis}
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-sm text-ink-soft">
+        Tačan sastav paketa i dinamiku prilagođavamo vašem timu pri dogovoru.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">
         Kako funkcioniše
       </h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
-        Jednostavno, u tri koraka: pozovete nas i kažete datum, broj gostiju i
-        priliku → predložimo meni i cenu po osobi ili po kilu → potvrdite, a mi
-        spremimo sve na vreme. Preuzimanje je u kafani, a logistiku za veće
-        događaje dogovaramo prema potrebi. Za veće porudžbine molimo najavu
-        nekoliko dana ranije.
+        Svake nedelje dobijate meni za narednu sedmicu — dvojezičnu tabelu
+        (srpski/ruski ili engleski) u koju svaki zaposleni upiše šta želi za
+        koji dan. Mi spremimo tačno toliko, i obroci stižu u vaše prostorije
+        svakog radnog dana. Bez viška, bez bacanja, bez „šta ćemo danas".
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">
-        Zašto Kuća Boema
+        Iz nedeljnog menija — doručak
       </h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
-        Zato što sve izlazi iz jedne kuhinje koja svaki dan hrani punu kafanu —
-        ništa se ne naručuje sa strane. Pečenje se otkošćuje ručno, roštilj ide
-        sa pravog žara, a količine i cene dogovaramo domaćinski: pošteno i bez
-        sitnih slova.
+        Hercegovački uštipci (slani sa kajmakom, sirom i ajvarom ili slatki sa
+        džemom i eurokremom), omleti i jaja na oko, kačamak, domaće pite (sir,
+        sir i zelje, krompir, pečurke), wrapovi (Cezar, tuna, kajgana, cepkana
+        prasetina), kroasani (caprese, mortadela, dimljeni losos, pršuta),
+        proteinska i ovsena kaša, granola sa grčkim jogurtom, sendviči.
+      </p>
+
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        Iz nedeljnog menija — ručak
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Supe i čorbe:</strong> teleća čorba,
+        pileća supa, pileća čorba.
+      </p>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Glavna jela:</strong> juneći gulaš,
+        punjene paprike, pasulj sa suvim rebrima, pileći paprikaš, praseće
+        pečenje bez kostiju sa pekarskim krompirom, ćevapi sa kajmakom,
+        gurmanska pljeskavica, pileća bečka šnicla, pileći file u sosu od
+        pečuraka, grilovana piletina ili ćuretina sa integralnim pirinčem,
+        njoke (sa ćuretinom ili 4 vrste sira), rižoto (povrće ili
+        piletina-kari), pasta bolognese, Cezar salata.
+      </p>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Salate:</strong> srpska, šopska, grčka,
+        moravska, tarator, prolećna, bašta, kupus, krastavac, paradajz sa
+        sirom.
+      </p>
+      <p className="mt-3 text-sm text-ink-soft">
+        Meni se menja iz nedelje u nedelju; redovno dodajemo nova jela.
+      </p>
+
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        Zašto firme ostaju kod nas
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        Prava kuhinja, ne ketering-fabrika: sve se sprema tog jutra, u kafani
+        koja živi od svog imena. Svaki zaposleni bira svoje jelo — nema
+        „uzmi ili ostavi" menija. A cena je fiksna po osobi, pa budžet znate
+        unapred.
       </p>
 
       <div className="mt-10">
@@ -98,26 +143,11 @@ export default function KeteringPage() {
           href="tel:+381605009551"
           className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Zatražite ponudu: 060 500 9551
+          Dogovorite probnu nedelju: 060 500 9551
         </a>
       </div>
-
-      <p className="mt-8 text-ink-soft">
-        Pogledajte{" "}
-        <Link
-          href="/jelovnik/"
-          className="text-wine underline decoration-gold underline-offset-4 hover:text-gold"
-        >
-          kompletan jelovnik
-        </Link>{" "}
-        ili{" "}
-        <Link
-          href="/proslave/"
-          className="text-wine underline decoration-gold underline-offset-4 hover:text-gold"
-        >
-          ponudu za proslave u kafani
-        </Link>
-        .
+      <p className="mt-4 text-sm text-ink-soft">
+        Stevan · Kuća Boema · Hasanaginice 8a, Rakovica, Beograd
       </p>
     </PageShell>
   );

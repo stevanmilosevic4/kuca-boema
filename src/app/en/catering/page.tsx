@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import LangSwitcher from "@/components/LangSwitcher";
 import SetLang from "@/components/SetLang";
 
-// English catering page for companies and expats in Belgrade.
+/*
+  HIDDEN B2B page — office catering (English).
+  Not linked anywhere, not in the sitemap, noindex — shared directly
+  with companies by the owner.
+*/
 export const metadata: Metadata = {
-  title: "Catering in Belgrade — Serbian food for events",
+  title: "Office catering — offer for companies",
   description:
-    "Corporate and event catering from Kuća Boema, a family-run kafana in Belgrade: spit-roasted pork by the kilo, grill platters, home-style dishes. +381 60 500 9551.",
+    "Breakfast and lunch for your team, every workday. Office catering by Kuća Boema, Belgrade.",
+  robots: { index: false, follow: false },
   alternates: {
     canonical: "/en/catering/",
     languages: {
@@ -19,6 +23,21 @@ export const metadata: Metadata = {
   },
 };
 
+const packages = [
+  {
+    name: "Breakfast + lunch",
+    price: "2,000 RSD",
+    unit: "per person / day",
+    desc: "The full day covered: breakfast of choice from the weekly menu + lunch (main course with soup or salad from the daily offer).",
+  },
+  {
+    name: "Lunch only",
+    price: "1,200 RSD",
+    unit: "per person / day",
+    desc: "Main course of choice from the weekly menu, with soup or salad from the daily offer.",
+  },
+];
+
 export default function CateringPage() {
   return (
     <PageShell>
@@ -26,63 +45,100 @@ export default function CateringPage() {
       <LangSwitcher current="en" />
 
       <p className="mb-3 text-sm uppercase tracking-[0.3em] text-gold">
-        Kuća Boema · Belgrade
+        Kuća Boema · for companies
       </p>
       <h1 className="font-display text-4xl text-wine sm:text-5xl">
-        Catering in Belgrade — real Serbian food for your event
+        Office catering — breakfast and lunch for your team
       </h1>
       <div className="rule-gold my-6 max-w-xs" />
 
       <p className="mb-4 text-ink-soft leading-relaxed">
-        When your company celebrates, the kitchen shouldn&apos;t be your
-        problem. Kuća Boema is a family-run kafana in Belgrade&apos;s Rakovica
-        district, rated 4.9 from 300+ Google reviews — and our catering is the
-        same food our guests come back for: slow-roasted pork, charcoal grill,
-        home-style Serbian dishes and generous meze platters.
+        Kuća Boema cooks and delivers fresh meals to Belgrade offices every
+        workday — from the same kitchen that feeds a full kafana rated 4.9
+        across 300+ Google reviews. Every employee picks their own dish from a
+        weekly menu, and your office receives one tidy daily delivery.
       </p>
 
-      <h2 className="mt-10 font-display text-2xl text-wine">What we offer</h2>
-      <ul className="mt-3 space-y-2 text-ink-soft leading-relaxed">
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Our signature: boneless
-          spit-roasted suckling pig, sold by the kilo (4,400 RSD/kg); roast
-          lamb (3,800 RSD/kg)
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Grill platters: ćevapi, stuffed
-          burgers, smoked sausages and skewers — ideal for standing receptions
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Home-style mains in bulk:
-          goulash, mućkalica, baked beans; sarma and sauerkraut in winter
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Meze boards: kajmak, prosciutto,
-          kulen, cheeses — with fresh homemade bread
-        </li>
-        <li className="flex gap-3">
-          <span className="text-gold">✦</span> Salads and homemade desserts;
-          Lenten (fasting) menu on request
-        </li>
-      </ul>
-
       <h2 className="mt-10 font-display text-2xl text-wine">
-        Who it&apos;s for
+        Packages &amp; pricing
       </h2>
-      <p className="mt-3 text-ink-soft leading-relaxed">
-        Office lunches, company anniversaries, team events and New Year
-        parties — as well as private family celebrations at your venue. If
-        you&apos;d rather come to us, our dining room and garden host groups of
-        any size.
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {packages.map((p) => (
+          <div
+            key={p.name}
+            className="rounded-sm border border-gold/40 bg-cream p-6"
+          >
+            <p className="font-display text-xl text-wine">{p.name}</p>
+            <p className="mt-2 text-3xl font-medium text-gold">
+              {p.price}
+              <span className="ml-2 text-sm font-normal text-ink-soft">
+                {p.unit}
+              </span>
+            </p>
+            <p className="mt-3 text-sm text-ink-soft leading-relaxed">
+              {p.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-sm text-ink-soft">
+        Exact package contents and schedule are tailored to your team.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">How it works</h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
-        Three steps: call us with the date, headcount and occasion → we propose
-        a menu and a price per person or per kilo → you confirm, we have
-        everything ready on time. Pickup is at the kafana; logistics for larger
-        events are arranged individually. For bigger orders, please give us a
-        few days&apos; notice.
+        Each week you receive next week&apos;s menu — a simple bilingual sheet
+        (English or Russian alongside Serbian) where every employee marks what
+        they want for each day. We cook exactly that, and meals arrive at your
+        office every workday. No waste, no guesswork, no &quot;what&apos;s for
+        lunch&quot; debates.
+      </p>
+
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        From the weekly menu — breakfast
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        Herzegovinian uštipci (savoury with kajmak, cheese and ajvar — or sweet
+        with jam and Eurocrem), omelettes and fried eggs, kačamak (polenta with
+        cheese and kajmak), homemade pies (cheese, cheese &amp; chard, potato,
+        mushroom), wraps (Caesar, tuna, scrambled egg, pulled pork), croissants
+        (caprese, mortadella, smoked salmon, prosciutto), protein and oat
+        porridge, granola with Greek yoghurt, sandwiches.
+      </p>
+
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        From the weekly menu — lunch
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Soups:</strong> veal soup, clear chicken
+        soup, chicken stew-soup.
+      </p>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Mains:</strong> beef goulash, stuffed
+        peppers, beans with smoked pork ribs, chicken paprikash, boneless
+        roast pork with baker&apos;s potatoes, ćevapi with kajmak, gourmet
+        pljeskavica, chicken schnitzel, chicken fillet in mushroom sauce,
+        grilled chicken or turkey with brown rice, gnocchi (turkey or
+        four-cheese), risotto (vegetable or chicken-curry), pasta Bolognese,
+        Caesar salad.
+      </p>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        <strong className="text-wine">Salads:</strong> Serbian, šopska, Greek,
+        Moravian, tarator, spring salad, garden salad, cabbage, cucumber,
+        tomato with cheese.
+      </p>
+      <p className="mt-3 text-sm text-ink-soft">
+        The menu rotates weekly, with new dishes added regularly.
+      </p>
+
+      <h2 className="mt-10 font-display text-2xl text-wine">
+        Why companies stay with us
+      </h2>
+      <p className="mt-3 text-ink-soft leading-relaxed">
+        A real kitchen, not a catering factory: everything is cooked that
+        morning, in a kafana that lives on its reputation. Every employee
+        chooses their own meal — no take-it-or-leave-it set menus. And the
+        price is fixed per person, so you know your budget upfront.
       </p>
 
       <div className="mt-10">
@@ -90,19 +146,11 @@ export default function CateringPage() {
           href="tel:+381605009551"
           className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Get a quote: +381 60 500 9551
+          Book a trial week: +381 60 500 9551
         </a>
       </div>
-
-      <p className="mt-8 text-ink-soft">
-        See our{" "}
-        <Link
-          href="/jelovnik/"
-          className="text-wine underline decoration-gold underline-offset-4 hover:text-gold"
-        >
-          full menu
-        </Link>{" "}
-        (in Serbian) or find us at Hasanaginice 8a, Rakovica, Belgrade.
+      <p className="mt-4 text-sm text-ink-soft">
+        Stevan · Kuća Boema · Hasanaginice 8a, Rakovica, Belgrade
       </p>
     </PageShell>
   );
