@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import LangSwitcher from "@/components/LangSwitcher";
 import SetLang from "@/components/SetLang";
+import RatingBadge from "@/components/RatingBadge";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 /*
   HIDDEN B2B page — office catering (English).
@@ -54,10 +56,13 @@ export default function CateringPage() {
 
       <p className="mb-4 text-ink-soft leading-relaxed">
         Kuća Boema cooks and delivers fresh meals to Belgrade offices every
-        workday — from the same kitchen that feeds a full kafana rated 4.9
-        across 300+ Google reviews. Every employee picks their own dish from a
-        weekly menu, and your office receives one tidy daily delivery.
+        workday — from the same kitchen that feeds a full kafana every day.
+        Every employee picks their own dish from a weekly menu, and your
+        office receives one tidy daily delivery.
       </p>
+      <div className="mb-4">
+        <RatingBadge label="Google rating" />
+      </div>
 
       <h2 className="mt-10 font-display text-2xl text-wine">
         Packages &amp; pricing
@@ -87,9 +92,8 @@ export default function CateringPage() {
 
       <h2 className="mt-10 font-display text-2xl text-wine">How it works</h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
-        Each week you receive next week&apos;s menu — a simple bilingual sheet
-        (English or Russian alongside Serbian) where every employee marks what
-        they want for each day. We cook exactly that, and meals arrive at your
+        Each week you receive next week&apos;s menu — a simple sheet where
+        every employee marks what they want for each day. We cook exactly that, and meals arrive at your
         office every workday. No waste, no guesswork, no &quot;what&apos;s for
         lunch&quot; debates.
       </p>
@@ -119,8 +123,8 @@ export default function CateringPage() {
         roast pork with baker&apos;s potatoes, ćevapi with kajmak, gourmet
         pljeskavica, chicken schnitzel, chicken fillet in mushroom sauce,
         grilled chicken or turkey with brown rice, gnocchi (turkey or
-        four-cheese), risotto (vegetable or chicken-curry), pasta Bolognese,
-        Caesar salad.
+        four-cheese), risotto (vegetable or chicken-curry), a variety of pasta
+        dishes, Caesar salad.
       </p>
       <p className="mt-3 text-ink-soft leading-relaxed">
         <strong className="text-wine">Salads:</strong> Serbian, šopska, Greek,
@@ -141,16 +145,21 @@ export default function CateringPage() {
         price is fixed per person, so you know your budget upfront.
       </p>
 
-      <div className="mt-10">
+      <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="tel:+381605009551"
+          href="tel:+381616056076"
           className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Book a trial week: +381 60 500 9551
+          Call: +381 61 60 56 076
         </a>
+        <WhatsAppButton
+          label="Chat on WhatsApp"
+          message="Hi Stevan! We're interested in your office catering offer."
+        />
       </div>
       <p className="mt-4 text-sm text-ink-soft">
-        Stevan · Kuća Boema · Hasanaginice 8a, Rakovica, Belgrade
+        Stevan · +381 61 60 56 076 · Kuća Boema · Hasanaginice 8a, Rakovica,
+        Belgrade
       </p>
     </PageShell>
   );

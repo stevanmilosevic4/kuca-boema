@@ -80,8 +80,8 @@ export default function Post() {
         kruženja i nervoze. Kad je lepo vreme, sedi se u bašti. Petkom od 20h
         sviraju tamburaši i starogradska muzika, pa se ručak ume pretvoriti u
         veče. Radimo od utorka do subote od 9 do 23h, nedeljom od 10 do 20h, a
-        ponedeljkom se odmaramo. Gosti su nam na Google-u dali ocenu 4,9 iz 303
-        recenzije. Ne hvalimo se, samo kažemo.
+        ponedeljkom se odmaramo. Gosti su nam na Google-u dali ocenu 4,9. Ne
+        hvalimo se, samo kažemo.
       </p>
 
       <p className="mt-8 text-ink-soft leading-relaxed">

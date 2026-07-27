@@ -23,8 +23,7 @@ export default function Post() {
       <p className="mb-4 text-ink-soft leading-relaxed">
         Ako se pitate gde na boemsko veče u Beogradu, a ne mili vam se gužva u
         centru, imamo predlog. Kuća Boema u Rakovici, u Hasanaginice 8a,
-        otvorena je 2024. i već nosi ocenu 4,9 na Google-u od preko tri stotine
-        gostiju. Petkom od 20h sviraju tamburaši, rakija je domaća, a pečenje
+        otvorena je 2024. i već nosi ocenu 4,9 na Google-u. Petkom od 20h sviraju tamburaši, rakija je domaća, a pečenje
         se vadi iz peći svakog dana u 15h.
       </p>
       <p className="mb-4 text-ink-soft leading-relaxed">

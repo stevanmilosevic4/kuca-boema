@@ -25,7 +25,7 @@ export default function Post() {
         meri zvezdicama, već osećajem: da li vas dočekaju kao svog, da li
         miriše pečenje, i da li se pesma zapeva sama od sebe. Upravo takvu
         kafanu smo izgradili u Rakovici — a da li smo uspeli, najbolje govore
-        gosti: na Google-u nam stoji ocena 4,9 iz 303 recenzije.
+        gosti: na Google-u nam stoji ocena 4,9.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">

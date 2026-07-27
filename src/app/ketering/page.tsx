@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import LangSwitcher from "@/components/LangSwitcher";
+import RatingBadge from "@/components/RatingBadge";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 /*
   SKRIVENA B2B stranica — kancelarijski ketering.
@@ -53,10 +55,12 @@ export default function KeteringPage() {
       <p className="mb-4 text-ink-soft leading-relaxed">
         Kuća Boema svakog radnog dana sprema i donosi obroke timovima u
         Beogradu — sveže, iz sopstvene kuhinje koja istovremeno hrani punu
-        kafanu (ocena 4,9 od preko 300 gostiju na Google-u). Svaki zaposleni
-        bira svoje jelo iz nedeljnog menija, a vama stiže jedna uredna isporuka
-        u kancelariju.
+        kafanu. Svaki zaposleni bira svoje jelo iz nedeljnog menija, a vama
+        stiže jedna uredna isporuka u kancelariju.
       </p>
+      <div className="mb-4">
+        <RatingBadge label="Google ocena" />
+      </div>
 
       <h2 className="mt-10 font-display text-2xl text-wine">Paketi i cene</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -86,9 +90,8 @@ export default function KeteringPage() {
         Kako funkcioniše
       </h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
-        Svake nedelje dobijate meni za narednu sedmicu — dvojezičnu tabelu
-        (srpski/ruski ili engleski) u koju svaki zaposleni upiše šta želi za
-        koji dan. Mi spremimo tačno toliko, i obroci stižu u vaše prostorije
+        Svake nedelje dobijate meni za narednu sedmicu — jednostavnu tabelu u
+        koju svaki zaposleni upiše šta želi za koji dan. Mi spremimo tačno toliko, i obroci stižu u vaše prostorije
         svakog radnog dana. Bez viška, bez bacanja, bez „šta ćemo danas".
       </p>
 
@@ -117,7 +120,7 @@ export default function KeteringPage() {
         gurmanska pljeskavica, pileća bečka šnicla, pileći file u sosu od
         pečuraka, grilovana piletina ili ćuretina sa integralnim pirinčem,
         njoke (sa ćuretinom ili 4 vrste sira), rižoto (povrće ili
-        piletina-kari), pasta bolognese, Cezar salata.
+        piletina-kari), različite paste, Cezar salata.
       </p>
       <p className="mt-3 text-ink-soft leading-relaxed">
         <strong className="text-wine">Salate:</strong> srpska, šopska, grčka,
@@ -138,16 +141,21 @@ export default function KeteringPage() {
         unapred.
       </p>
 
-      <div className="mt-10">
+      <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="tel:+381605009551"
+          href="tel:+381616056076"
           className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Dogovorite probnu nedelju: 060 500 9551
+          Pozovite: +381 61 60 56 076
         </a>
+        <WhatsAppButton
+          label="Pišite na WhatsApp"
+          message="Zdravo Stevane! Zanima nas ponuda kancelarijskog keteringa."
+        />
       </div>
       <p className="mt-4 text-sm text-ink-soft">
-        Stevan · Kuća Boema · Hasanaginice 8a, Rakovica, Beograd
+        Stevan · +381 61 60 56 076 · Kuća Boema · Hasanaginice 8a, Rakovica,
+        Beograd
       </p>
     </PageShell>
   );

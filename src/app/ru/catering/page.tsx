@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import LangSwitcher from "@/components/LangSwitcher";
 import SetLang from "@/components/SetLang";
+import RatingBadge from "@/components/RatingBadge";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 /*
   СКРЫТАЯ B2B-страница — офисный кейтеринг (русский).
@@ -54,10 +56,13 @@ export default function CateringRuPage() {
 
       <p className="mb-4 text-ink-soft leading-relaxed">
         Kuća Boema каждый рабочий день готовит и привозит свежие обеды в офисы
-        Белграда — из той же кухни, что кормит полную кафану с оценкой 4,9 по
-        300+ отзывам в Google. Каждый сотрудник выбирает своё блюдо из
-        недельного меню, а в офис приезжает одна аккуратная доставка в день.
+        Белграда — из той же кухни, что каждый день кормит полную кафану.
+        Каждый сотрудник выбирает своё блюдо из недельного меню, а в офис
+        приезжает одна аккуратная доставка в день.
       </p>
+      <div className="mb-4">
+        <RatingBadge label="Оценка в Google" />
+      </div>
 
       <h2 className="mt-10 font-display text-2xl text-wine">Пакеты и цены</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -88,8 +93,7 @@ export default function CateringRuPage() {
       </h2>
       <p className="mt-3 text-ink-soft leading-relaxed">
         Каждую неделю вы получаете меню на следующую неделю — простую
-        двуязычную таблицу (русский или английский рядом с сербским), где
-        каждый сотрудник отмечает, что хочет в какой день. Мы готовим ровно
+        таблицу, где каждый сотрудник отмечает, что хочет в какой день. Мы готовим ровно
         столько, и еда приезжает в офис каждый рабочий день. Без лишнего, без
         угадываний, без «что сегодня на обед».
       </p>
@@ -120,7 +124,7 @@ export default function CateringRuPage() {
         каймаком, гурманская плескавица, куриный шницель по-венски, куриное
         филе в грибном соусе, курица или индейка гриль с бурым рисом, ньокки
         (с индейкой или четыре сыра), ризотто (овощное или курица-карри),
-        паста «Болоньезе», салат «Цезарь».
+        разные пасты, салат «Цезарь».
       </p>
       <p className="mt-3 text-ink-soft leading-relaxed">
         <strong className="text-wine">Салаты:</strong> сербский, шопский,
@@ -141,16 +145,21 @@ export default function CateringRuPage() {
         фиксированная на человека — бюджет известен заранее.
       </p>
 
-      <div className="mt-10">
+      <div className="mt-10 flex flex-wrap gap-4">
         <a
-          href="tel:+381605009551"
+          href="tel:+381616056076"
           className="inline-block rounded-full bg-gold px-8 py-3 font-medium text-wine-dark transition-transform hover:scale-105"
         >
-          Договориться о пробной неделе: +381 60 500 9551
+          Позвонить: +381 61 60 56 076
         </a>
+        <WhatsAppButton
+          label="Написать в WhatsApp"
+          message="Здравствуйте, Стеван! Нас интересует офисный кейтеринг."
+        />
       </div>
       <p className="mt-4 text-sm text-ink-soft">
-        Стеван · Kuća Boema · Hasanaginice 8a, Раковица, Белград
+        Стеван · +381 61 60 56 076 · Kuća Boema · Hasanaginice 8a, Раковица,
+        Белград
       </p>
     </PageShell>
   );

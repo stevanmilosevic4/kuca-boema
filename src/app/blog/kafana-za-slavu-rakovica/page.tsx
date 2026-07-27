@@ -29,7 +29,7 @@ export default function Post() {
       <p className="mb-4 text-ink-soft leading-relaxed">
         Otvorili smo 2024. i od tada se kod nas već slavilo, krštavalo i
         pevalo. Kafana je mlada, ali slava je slava — red se zna. Gosti su nam
-        na Google-u dali ocenu 4,9 iz preko 300 recenzija, a mi se i dalje
+        na Google-u dali ocenu 4,9, a mi se i dalje
         ponašamo kao da je svaka slava prva.
       </p>
 
