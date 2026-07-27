@@ -6,6 +6,7 @@ const footerLinks = [
   { href: "/proslave/", label: "Proslave" },
   { href: "/slave/", label: "Slave i krštenja" },
   { href: "/blog/", label: "Boemske priče" },
+  { href: "/ketering/", label: "Ketering" },
 ];
 
 export default function Footer() {
