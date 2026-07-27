@@ -68,6 +68,13 @@ export default function ProslavePage() {
         >
           jelovnik
         </Link>
+        . Slavite u svom prostoru? Tu je naš{" "}
+        <Link
+          href="/ketering/"
+          className="text-wine underline decoration-gold underline-offset-4 hover:text-gold"
+        >
+          ketering
+        </Link>
         .
       </p>
     </PageShell>
