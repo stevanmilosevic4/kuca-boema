@@ -132,7 +132,8 @@ export default function CateringPage() {
         tomato with cheese.
       </p>
       <p className="mt-3 text-sm text-ink-soft">
-        The menu rotates weekly, with new dishes added regularly.
+        This is our standard menu — and just a starting point. Tell us what
+        your team loves, and we&apos;ll tailor it to you.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">

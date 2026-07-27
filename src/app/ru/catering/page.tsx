@@ -132,7 +132,8 @@ export default function CateringRuPage() {
         огуречный, помидоры с сыром.
       </p>
       <p className="mt-3 text-sm text-ink-soft">
-        Меню меняется каждую неделю; регулярно добавляем новые блюда.
+        Это наше стандартное меню — и лишь точка отсчёта. Скажите, что любит
+        ваша команда, и мы подстроим его под вас.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">

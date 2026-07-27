@@ -128,7 +128,8 @@ export default function KeteringPage() {
         sirom.
       </p>
       <p className="mt-3 text-sm text-ink-soft">
-        Meni se menja iz nedelje u nedelju; redovno dodajemo nova jela.
+        Ovo je naš standardni meni — i samo polazna tačka. Recite nam šta vaš
+        tim voli, i skrojićemo ga po vašoj meri.
       </p>
 
       <h2 className="mt-10 font-display text-2xl text-wine">
