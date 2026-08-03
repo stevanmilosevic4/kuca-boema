@@ -116,6 +116,11 @@ const restaurantSchema = {
   sameAs: ["https://www.instagram.com/kucaboema/"],
 };
 
+// Cloudflare Web Analytics — statistika poseta (bez kolačića, bez banera).
+// Kada vlasnik napravi nalog na cloudflare.com i doda sajt, ovde se upiše
+// token iz njihovog snippet-a i analitika kreće. Prazan token = ništa se ne učitava.
+const CF_ANALYTICS_TOKEN = "";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -132,6 +137,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
         />
         {children}
+        {CF_ANALYTICS_TOKEN && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: CF_ANALYTICS_TOKEN })}
+          />
+        )}
       </body>
     </html>
   );
