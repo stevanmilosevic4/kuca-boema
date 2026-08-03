@@ -119,7 +119,7 @@ const restaurantSchema = {
 // Cloudflare Web Analytics — statistika poseta (bez kolačića, bez banera).
 // Kada vlasnik napravi nalog na cloudflare.com i doda sajt, ovde se upiše
 // token iz njihovog snippet-a i analitika kreće. Prazan token = ništa se ne učitava.
-const CF_ANALYTICS_TOKEN = "";
+const CF_ANALYTICS_TOKEN = "329dbdd13020451daa99768d651318ae";
 
 export default function RootLayout({
   children,
@@ -139,7 +139,7 @@ export default function RootLayout({
         {children}
         {CF_ANALYTICS_TOKEN && (
           <script
-            defer
+            type="module"
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon={JSON.stringify({ token: CF_ANALYTICS_TOKEN })}
           />
