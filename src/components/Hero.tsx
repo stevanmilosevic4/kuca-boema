@@ -4,24 +4,18 @@ export default function Hero() {
       id="vrh"
       className="relative flex min-h-[calc(100vh-3.75rem)] items-center justify-center overflow-hidden text-cream"
     >
-      {/* Background: layered warm gradients evoking candlelit kafana walls.
-          Replace with a photo by setting a background-image on this div. */}
+      {/* Fotografija bašte sa tamnim slojevima za čitljiv tekst. */}
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-20 bg-cover bg-center"
         style={{
-          background:
-            "radial-gradient(120% 120% at 50% 0%, #6b2028 0%, #3d1016 45%, #260a0e 100%)",
+          backgroundImage: "url('/hero/basta-kuca-boema.jpg')",
         }}
       />
-      <div
-        className="absolute inset-0 -z-10 opacity-30"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(135deg, rgba(198,151,73,0.18) 0 2px, transparent 2px 26px)",
-        }}
-      />
+      <div className="absolute inset-0 -z-10 bg-black/50" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(61,16,22,0.34)_0%,rgba(25,7,9,0.2)_50%,rgba(10,4,5,0.62)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-wine-dark/80 to-transparent" />
 
-      <div className="mx-auto max-w-3xl px-6 py-24 text-center">
+      <div className="mx-auto max-w-3xl px-6 py-24 text-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
         <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gold-soft">
           Od 2024 · Hasanaginice 8a
         </p>
